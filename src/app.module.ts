@@ -3,7 +3,9 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { MikroOrmModule } from '@mikro-orm/nestjs';
 import { join } from 'path';
+import { CitiesModule } from './cities/cities.module';
 import { CompaniesModule } from './companies/companies.module';
+import { SpecialtiesModule } from './specialties/specialties.module';
 
 @Module({
   imports: [
@@ -12,7 +14,9 @@ import { CompaniesModule } from './companies/companies.module';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
     }),
     MikroOrmModule.forRoot(),
+    CitiesModule,
     CompaniesModule,
+    SpecialtiesModule,
   ],
   controllers: [],
   providers: [],

@@ -8,4 +8,8 @@ export default {
     path: './dist/migrations',
     pathTs: './src/migrations',
   },
+  seeder: {
+    path: './dist/seeder',
+    pathTs: './src/seeder',
+  },
 };
