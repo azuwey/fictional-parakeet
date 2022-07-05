@@ -3,6 +3,7 @@ import {
   Collection,
   Entity,
   ManyToMany,
+  ManyToOne,
   PrimaryKey,
   Property,
 } from '@mikro-orm/core';
@@ -24,9 +25,9 @@ export class Company {
   @Field()
   logoUrl: string;
 
-  @ManyToMany(() => City)
-  @Field(() => [City])
-  city = new Collection<City>(this);
+  @ManyToOne(() => City)
+  @Field(() => City)
+  city: City;
 
   @ManyToMany(() => Specialty)
   @Field(() => [Specialty])

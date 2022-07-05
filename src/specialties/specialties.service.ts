@@ -9,4 +9,16 @@ export class SpecialtiesService {
     @InjectRepository(Specialty)
     private readonly specialtyRepository: EntityRepository<Specialty>,
   ) {}
+
+  findOneById(id: number): Promise<Specialty> {
+    return this.specialtyRepository.findOne({ id });
+  }
+
+  findAll(ids?: readonly number[]): Promise<Specialty[]> {
+    return this.specialtyRepository.find(
+      ids && {
+        id: { $in: ids as number[] },
+      },
+    );
+  }
 }

@@ -7,5 +7,6 @@ import { CompaniesResolver } from './companies.resolver';
 @Module({
   imports: [MikroOrmModule.forFeature([Company])],
   providers: [CompaniesService, CompaniesResolver],
+  exports: [CompaniesService],
 })
 export class CompaniesModule {}

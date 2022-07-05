@@ -9,4 +9,8 @@ export class CitiesService {
     @InjectRepository(City)
     private readonly cityRepository: EntityRepository<City>,
   ) {}
+
+  findAll(): Promise<City[]> {
+    return this.cityRepository.findAll();
+  }
 }
