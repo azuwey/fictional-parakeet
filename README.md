@@ -1,36 +1,62 @@
 # Fictional-parakeet
 
-Fictional-parakeet is a mock application for real time search implementation with GraphQL
+Fictional-parakeet is a mock company search application with GraphQL, React and Typescript
 
 ## Installation
 
 ```bash
-$ npm install
+npm install
 ```
 
-## Setup Database
+## Running the application
 
-To run the migrations and fill the database with generated data, use the following command:
+To run the application you first need to migrate the database running the following command:
 
-```bash
-$ npm run migration:seed
+```shell
+# Migrate the database and fill it with generated data
+npm run server:migrate:seed
+
+# or without generated data
+npm run server:migrate:up
 ```
 
-or if you just want to use an empty database use the following command:
+After you migrated the database, you can use the following commands to build and then run the application in production
+mode:
 
-```bash
-$ npm run migration:up
+```shell
+# Builds the front-end application
+npm run client:build
+
+# Builds the back-end application
+npm run server:build
+
+# Starts the application
+npm run server:start:prod
 ```
 
-## Running the app
+Now you should be able to access it at `http://localhost:3000/`.
 
-```bash
-# development
-$ npm run start
+## Development
 
-# watch mode
-$ npm run start:dev
+To run the development build you need to run the client and server application at the same time, but first you need to
+migrate the database running the following command:
 
-# production mode
-$ npm run start:prod
+```shell
+# Migrate the database and fill it with generated data
+npm run server:migrate:seed
+
+# or without generated data
+npm run server:migrate:up
 ```
+
+After that you can use the following commands to run both application in development mode:
+
+```shell
+# Starts the back-end application
+npm run server:start:dev
+
+# Starts the front-end application
+npm run client:start:dev
+```
+
+Now you should be able to access the application at `http://localhost:3001`.

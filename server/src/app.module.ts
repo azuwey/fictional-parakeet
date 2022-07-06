@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { MikroOrmModule } from '@mikro-orm/nestjs';
+import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { GraphQLContext } from './types/graphql-context.type';
 import { CitiesModule } from './cities/cities.module';
@@ -15,6 +16,9 @@ import { CompaniesService } from './companies/companies.service';
 
 @Module({
   imports: [
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', '..', 'client', 'dist'),
+    }),
     GraphQLModule.forRootAsync<ApolloDriverConfig>({
       driver: ApolloDriver,
       imports: [CompaniesModule],
