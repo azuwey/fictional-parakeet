@@ -8,6 +8,20 @@ Fictional-parakeet is a mock application for real time search implementation wit
 $ npm install
 ```
 
+## Setup Database
+
+To run the migrations and fill the database with generated data, use the following command:
+
+```bash
+$ npm run migration:seed
+```
+
+or if you just want to use an empty database use the following command:
+
+```bash
+$ npm run migration:up
+```
+
 ## Running the app
 
 ```bash
@@ -19,17 +33,4 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
