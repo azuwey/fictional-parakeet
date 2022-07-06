@@ -1,6 +1,6 @@
 # Fictional-parakeet
 
-Fictional-parakeet is a mock company search application with GraphQL, React and Typescript
+Fictional-parakeet is a mock company search application with Typescript, NestJS, GraphQL, React and Tailwind.
 
 ## Installation
 
