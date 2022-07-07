@@ -1,7 +1,7 @@
 {
   "name": "fictional-parakeet",
   "version": "1.0.0",
-  "description": "Fictional-parakeet is a mock application with GraphQL, React and Typescript",
+  "description": "Fictional-parakeet is a mock company search application with Typescript, NestJS, GraphQL, React and Tailwind.",
   "author": "David Zarandi",
   "private": true,
   "license": "BSD-3-Clause",
