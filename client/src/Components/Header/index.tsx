@@ -9,5 +9,5 @@ export default function Header({ cityName }: Props) {
         <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">Companies in {cityName}</h1>
       </div>
     </header>
-  )
+  );
 }
