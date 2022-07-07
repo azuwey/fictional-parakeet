@@ -18,7 +18,7 @@ export default function App() {
             <Filter />
           </nav>
         </aside>
-        <div className="ml-72 w-auto pt-6">
+        <div className="ml-72 w-auto py-6">
           <CompanyList />
         </div>
       </main>
