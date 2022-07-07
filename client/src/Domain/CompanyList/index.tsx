@@ -23,7 +23,7 @@ export function CompanyList() {
           key={`company_${company.name.replaceAll(' ', '').toLowerCase()}`}
            className="border-2 bg-gray-200 rounded-lg"
         >
-          <div className="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+          <div className="w-full aspect-w-7 aspect-h-8 rounded-lg overflow-hidden">
             <img
               src={company.logoUrl}
               alt={`${company.name}'s logo`}
