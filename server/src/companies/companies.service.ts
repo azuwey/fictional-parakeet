@@ -20,7 +20,9 @@ export class CompaniesService {
       $and: [
         name && { name: { $like: `%${name}%` } },
         cityId && { city: { $eq: cityId } },
-        specialtyIds && { specialties: { $in: specialtyIds } },
+        ...(specialtyIds ?? []).map((specialtyId) => ({
+          specialties: specialtyId,
+        })),
       ],
     });
   }
