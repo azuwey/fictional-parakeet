@@ -37,7 +37,7 @@ export default function Select({ options, onChange }: Props) {
         return (
           <div key={key} className="flex items-center">
             <input
-              className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+              className="h-4 w-4 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-gray-600"
               type="checkbox"
               id={key}
               value={index}
