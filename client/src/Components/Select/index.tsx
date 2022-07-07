@@ -8,7 +8,7 @@ interface Props {
 export default function Select({ options, onChange }: Props) {
   const [state, setState] = useState({
     selectedOptions: [] as number[]
-  })
+  });
 
   const onChangeCb = (event: React.ChangeEvent<HTMLInputElement>) => {
     const currentTarget = event.currentTarget;
@@ -19,16 +19,16 @@ export default function Select({ options, onChange }: Props) {
       if (currentTarget.checked) {
         selectedOptions.push(parseInt(currentTarget.value));
       } else {
-        selectedOptions = selectedOptions.filter((selectedIndex) => selectedIndex !== parseInt(currentTarget.value))
+        selectedOptions = selectedOptions.filter((selectedIndex) => selectedIndex !== parseInt(currentTarget.value));
       }
 
-      return { selectedOptions }
-    })
-  }
+      return { selectedOptions };
+    });
+  };
 
   useEffect(() => {
     onChange?.(state.selectedOptions)
-  }, [state])
+  }, [state]);
 
   return (
     <div className="pt-6 space-y-4">

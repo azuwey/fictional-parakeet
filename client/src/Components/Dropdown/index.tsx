@@ -11,13 +11,13 @@ export default function Dropdown({ options, onSelect, defaultOptionIndex }: Prop
   const [state, setState] = useState({
     selectedIndex: defaultOptionIndex ?? 0,
     isOpen: false
-  })
+  });
 
   const onSelectCb = (selectedIndex: number) => setState({ selectedIndex, isOpen: false })
 
   useEffect(() => {
     onSelect?.(state.selectedIndex)
-  }, [state])
+  }, [state]);
 
   return (
     <div>
@@ -56,5 +56,5 @@ export default function Dropdown({ options, onSelect, defaultOptionIndex }: Prop
         </div>
       )}
     </div>
-  )
+  );
 }

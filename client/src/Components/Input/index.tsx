@@ -5,7 +5,7 @@ interface Props {
   startAdornment?: ReactNode;
   placeholder?: string;
   type?: HTMLInputTypeAttribute;
-  onChange?: ChangeEventHandler<HTMLInputElement>
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
 export default function Input({ startAdornment, placeholder, type, onChange }: Props) {

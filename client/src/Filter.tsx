@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { FilterContext } from "./Contexts/filter";
 import { SearchIcon } from "@heroicons/react/solid";
+import { FilterContext } from "./Contexts/filter";
 import Dropdown from "./Components/Dropdown";
 import Select from "./Components/Select";
 import Input from "./Components/Input";
